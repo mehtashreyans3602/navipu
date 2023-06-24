@@ -1,5 +1,8 @@
 import React from 'react'
 import { useJsApiLoader, GoogleMap } from "@react-google-maps/api";
+import Nearby from './Nearby';
+import Events from './Events';
+import Header from './Header';
 
 
 const center = {
@@ -11,7 +14,7 @@ const center = {
 const AdminMap = () => {
 
   const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: process.env.REACT_APP_MAPS_API_KEY ,
+    googleMapsApiKey: process.env.REACT_APP_MAPS_API_KEY,
   });
 
   if (!isLoaded) {
@@ -23,12 +26,16 @@ const AdminMap = () => {
 
 
   return (
-    <section className='w-screen h-screen flex gap-6'>
-      <p>adminmap</p>
-      <GoogleMap  center={center} zoom={12} mapContainerClassName='w-5/6 h-full'>
-        {/* display marker and directions */}
+    <section className='w-screen h-screen flex flex-col gap-6'>
+      <Header />
+      <div className='w-full h-full flex gap-6'>
+        <Nearby />
+        <GoogleMap center={center} zoom={12} mapContainerClassName='w-[70%] h-auto rounded-3xl '>
+          {/* display marker and directions */}
 
-      </GoogleMap>
+        </GoogleMap>
+        <Events />
+      </div>
     </section>
   )
 }
