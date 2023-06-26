@@ -13,7 +13,7 @@ const Profile = (props) => {
   return (
     isAuthenticated && (
       <div>
-       <p>{props.innertext}, {user.name}</p>
+       <p>{props.innertext},{isAuthenticated ? user.name : 'guest'}</p>
       </div>
     )
   );

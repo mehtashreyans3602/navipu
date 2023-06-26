@@ -1,21 +1,33 @@
-import React from 'react'
-import { useJsApiLoader, GoogleMap } from "@react-google-maps/api";
+import React, { useState } from 'react'
+import { useJsApiLoader, GoogleMap, Marker } from "@react-google-maps/api";
 import Nearby from './Nearby';
 import Events from './Events';
 import Header from './Header';
+import ControllPanel from './atoms/ControllPanel';
 
 
 const center = {
-  lat: 40.730610,
-  lng: -73.935242
+  lat:  22.288540,
+  lng: 73.364620
 }
 
 
 const AdminMap = () => {
 
+  const [map, setMap] = useState( /** @type google.maps.map */ null);
+
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: process.env.REACT_APP_MAPS_API_KEY,
   });
+
+
+  const handleMapClick = (event) => {
+    const lat = event.latLng.lat();
+    const lng = event.latLng.lng();
+
+    // Do something with the latitude and longitude values
+    console.log('Clicked coordinates:', lat, lng);
+  };
 
   if (!isLoaded) {
     return <div role="status" className="space-y-8 animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-center">
@@ -26,14 +38,20 @@ const AdminMap = () => {
 
 
   return (
-    <section className='w-screen h-screen flex flex-col gap-6'>
+    <section className='w-screen h-screen flex flex-col gap-2 md:gap-6 overflow-hidden'>
       <Header />
-      <div className='w-full h-full flex gap-6'>
+      <div className='w-full h-[100%] flex gap-2 md:gap-6'>
         <Nearby />
-        <GoogleMap center={center} zoom={12} mapContainerClassName='w-[70%] h-auto rounded-3xl '>
-          {/* display marker and directions */}
+        <div className='flex w-[70%] h-full md:flex-col gap-y-2 md:gap-y-6 pb-2 md:pb-6 flex-col-reverse'>
+          <ControllPanel />
+          <GoogleMap onClick={handleMapClick} mapContainerClassName='w-full h-full rounded-3xl relative' center={center} zoom={16} options={{ fullscreenControl: false, zoomControl: false, streetViewControl: false, map }}  onLoad={map => setMap(map)}>
+            {/* display marker and directions */}
+            <button onClick={() => map.panTo(center)} className="material-symbols-outlined text-xl absolute bg-green-400 p-2 m-4 rounded-3xl right-0 top-0 "> my_location
+            </button>
+            <Marker  position={center}  />
+          </GoogleMap>
 
-        </GoogleMap>
+        </div>
         <Events />
       </div>
     </section>
