@@ -1,9 +1,9 @@
 {
   "short_name": "React App",
-  "name": "Create React App Sample",
+  "name": "NAVIPU",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "https://yt3.googleusercontent.com/oEQpDQ-Mt5ICmTvrKelavxxPI1Pk2i3dt0JM1fypJvylX1SEvkVjAeqOhwXNOeQK9k3RSWY5ZQ=s176-c-k-c0x00ffffff-no-rj",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },

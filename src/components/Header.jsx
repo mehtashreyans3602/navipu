@@ -4,8 +4,7 @@ import Profile from "./atoms/Profile";
 
 const Header = () => {
     const { isAuthenticated } = useAuth0();
-  return (
-    <section className='w-auto h-[8.31%] mx-[2%] flex items-center justify-center rounded-b-3xl bg-yellow-200'>
+  return ( <section className='w-auto h-[8.31%] mx-[2%] flex items-center justify-center rounded-b-3xl bg-blue-200'>
  {!isAuthenticated ? <p>hi please login</p> : <Profile innertext='welcome' />}
     </section>
   )
