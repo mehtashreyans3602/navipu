@@ -1,17 +1,17 @@
-// import React, { createContext, useState } from 'react';
+import React, { createContext, useState } from 'react';
 
-// export const LocationContext = createContext();
+export const LocationContext = createContext();
 
-// export const LocationProvider = ({ children }) => {
-//   const [selectedLocation, setSelectedLocation] = useState(null);
+export const LocationProvider = ({ children }) => {
+  const [selectedLocation, setSelectedLocation] = useState(null);
 
-//   const selectLocation = (location) => {
-//     setSelectedLocation(location);
-//   };
+  const selectLocation = (location) => {
+    setSelectedLocation(location);
+  };
 
-//   return (
-//     <LocationContext.Provider value={{ selectedLocation, selectLocation }}>
-//       {children}
-//     </LocationContext.Provider>
-//   );
-// };
+  return (
+    <LocationContext.Provider value={{ selectedLocation, selectLocation }}>
+      {children}
+    </LocationContext.Provider>
+  );
+};
