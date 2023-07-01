@@ -6,13 +6,13 @@ import Guestmap from "./components/Guestmap";
 import { useAuth0 } from "@auth0/auth0-react";
 function App() {
   const { isAuthenticated } = useAuth0();
-
+  const google = window.google;
   return (
     <div className="App">
 
 
       {!isAuthenticated ? <LoginButton logintext='login for admin only' /> : ''}
-      {isAuthenticated ? <AdminMap /> : <Guestmap />}
+      {isAuthenticated ? <AdminMap google={google} /> : <Guestmap />}
 
     </div>
   );

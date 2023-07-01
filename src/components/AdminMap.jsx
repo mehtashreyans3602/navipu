@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useJsApiLoader, GoogleMap, Marker } from "@react-google-maps/api";
-import Nearby from './Nearby';
+// import Nearby from './Nearby';
 import Events from './Events';
 import Header from './Header';
 import ControllPanel from './atoms/ControllPanel';
@@ -12,7 +12,7 @@ const center = {
 }
 
 
-const AdminMap = () => {
+const AdminMap = ({ google }) => {
 
   const [map, setMap] = useState( /** @type google.maps.map */ null);
   const [selectedLocation, setSelectedLocation] = useState(null);
@@ -21,10 +21,13 @@ const AdminMap = () => {
     googleMapsApiKey: process.env.REACT_APP_MAPS_API_KEY,
   });
 
-  const handleCardClick = (location) => {
-    setSelectedLocation(location);
-  };
 
+  const handleMarkerClick = (marker, e) => {
+    if (marker && marker.getPosition) {
+      const position = marker.getPosition(); // Get the marker's position
+      console.log('Clicked Marker Position:', position.lat(), position.lng());
+    }
+  };
 
   const handleMapClick = (event) => {
     const lat = event.latLng.lat();
@@ -41,19 +44,66 @@ const AdminMap = () => {
       </div> </div>;
   }
 
+  // add locations here
+  const locations = [
+    { name: 'PIET', lat: 22.288552903578147, lng: 73.36402505636215 },
+    // { name: 'PIT', lat: 37.3352, lng: -121.8811 },
+    // { name: 'PIA', lat: 37.3352, lng: -121.8811 },
+    // { name: 'PPI', lat: 37.3352, lng: -121.8811 },
+    // { name: 'PID', lat: 37.3352, lng: -121.8811 },
+    // Add more locations as needed
+  ];
+
+  const handleCardClick = (location) => {
+    setSelectedLocation(location);
+    if (map && location) {
+      const { lat, lng } = location;
+      const newCenter = new google.maps.LatLng(lat, lng);
+      map.panTo(newCenter);
+    }
+  };
+
+  const pantocenter = () => {
+    { map.panTo(center) }
+  }
+  const mapclickevent = (marker, e) => {
+    pantocenter();
+    handleMarkerClick(marker, e);
+  }
+
+
 
   return (
     <section className='w-screen h-screen flex flex-col gap-2 md:gap-6 overflow-hidden'>
       <Header />
+
       <div className='w-full h-[100%] flex gap-2 md:gap-6'>
-        <Nearby  />
+        {/* card wrapper nearby */}
+        <div className='overflow-hidden flex flex-col gap-2 w-[15%] md:w-[10%] h-full rounded-tr-3xl bg-blue-200 p-[1.7%] max-h-[800px]'>
+          <p className='font-sans font-semibold uppercase text-xs flex items-center'> Nearby</p>
+          {/* card container */}
+          <section className='h-[100%]  scroll-smooth rounded-md md:rounded-xl w-full flex flex-col gap-2 md:gap-4 overflow-y-scroll'>
+            {/* card items */}
+            {locations.map((location, index) => (
+              <section key={index} onClick={() => handleCardClick(location)} className='card select-none group active:bg-blue-700  w-full  h-auto border-2 p-1 md:p-2 gap-2 border-blue-700 rounded-md md:rounded-2xl cursor-pointer '>
+                {/* svg as asquare image holder */}
+                <img className='rounded-md md:rounded-2xl h-auto  object-cover' src="https://maps.gstatic.com/tactile/pane/default_geocode-2x.png" alt="placeholder image" />
+                <p className=' text-sm truncate group-active:text-white'>{location.name}</p>
+              </section>
+            ))}
+          </section>
+        </div>
+
+        {/* stage | google map */}
         <div className='flex w-[70%] h-full md:flex-col gap-y-2 md:gap-y-6 pb-2 md:pb-6 flex-col-reverse'>
           <ControllPanel />
-          <GoogleMap onClick={handleMapClick} mapContainerClassName='w-full h-full rounded-3xl relative' center={center} zoom={16} options={{ fullscreenControl: false, zoomControl: false, streetViewControl: false, map }} onLoad={map => setMap(map)}>
+          <GoogleMap google={google} onClick={handleMapClick} mapContainerClassName='w-full h-full rounded-3xl relative' center={center} zoom={16} options={{ fullscreenControl: false, zoomControl: false, streetViewControl: false, map }} onLoad={map => setMap(map)}>
             {/* display marker and directions */}
-            <button onClick={() => map.panTo(center)} className="material-symbols-outlined text-xl absolute bg-green-400 p-2 m-4 rounded-3xl right-0 top-0 "> my_location
+            <button onClick={mapclickevent} className="material-symbols-outlined text-xl absolute bg-green-400 p-2 m-4 rounded-3xl right-0 top-0 "> my_location
             </button>
-            <Marker position={center} />
+            {selectedLocation && (
+              <Marker position={selectedLocation} />
+            )}
           </GoogleMap>
 
         </div>
