@@ -4,7 +4,7 @@ import Nearby from './Nearby';
 import Events from './Events';
 import Header from './Header';
 import ControllPanel from './atoms/ControllPanel';
-
+import { LocationContext } from "../context/Locationcontext";
 
 const center = {
   lat: 22.288540,
@@ -12,26 +12,30 @@ const center = {
 }
 
 
+
 const AdminMap = () => {
 
   const [map, setMap] = useState( /** @type google.maps.map */ null);
-  const [selectedLocation, setSelectedLocation] = useState(null);
+  const [selectedLocation] = useState(LocationContext);
 
+  //   const markerposition = {
+  //   lat: parseFloat(selectedLocation.lat),
+  //   lng: parseFloat(selectedLocation.lng)
+  // }
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: process.env.REACT_APP_MAPS_API_KEY,
   });
-
-  const handleCardClick = (location) => {
-    setSelectedLocation(location);
-  };
 
 
   const handleMapClick = (event) => {
     const lat = event.latLng.lat();
     const lng = event.latLng.lng();
-    setSelectedLocation({ lat, lng });
     // Do something with the latitude and  valueslongitude
     console.log('Clicked coordinates:', lat, lng);
+  };
+
+  const onLoad = (marker) => {
+    console.log("marker: ", marker);
   };
 
   if (!isLoaded) {
@@ -46,14 +50,20 @@ const AdminMap = () => {
     <section className='w-screen h-screen flex flex-col gap-2 md:gap-6 overflow-hidden'>
       <Header />
       <div className='w-full h-[100%] flex gap-2 md:gap-6'>
-        <Nearby  />
+        <Nearby />
         <div className='flex w-[70%] h-full md:flex-col gap-y-2 md:gap-y-6 pb-2 md:pb-6 flex-col-reverse'>
           <ControllPanel />
-          <GoogleMap onClick={handleMapClick} mapContainerClassName='w-full h-full rounded-3xl relative' center={center} zoom={16} options={{ fullscreenControl: false, zoomControl: false, streetViewControl: false, map }} onLoad={map => setMap(map)}>
+          <GoogleMap onClick={handleMapClick} mapContainerClassName='w-full h-full rounded-3xl relative' center={center} zoom={18} options={{ fullscreenControl: false, zoomControl: false, streetViewControl: false, map }} onLoad={map => setMap(map)}>
             {/* display marker and directions */}
             <button onClick={() => map.panTo(center)} className="material-symbols-outlined text-xl absolute bg-green-400 p-2 m-4 rounded-3xl right-0 top-0 "> my_location
             </button>
-            <Marker position={center} />
+
+            {selectedLocation && (
+              // <Marker onLoad={onLoad} position={markerposition} />
+              // <Marker position={selectedLocation} />
+              <Marker onVisibleChanged={console.log('visible changed')}  position={{ lat: parseFloat(selectedLocation.lat), lng: parseFloat(selectedLocation.lng) }} onPositionChanged={console.log('position changed')} />
+            )}
+            {/* <Marker position={center} onPositionChanged={console.log('position changed')} /> */}
           </GoogleMap>
 
         </div>

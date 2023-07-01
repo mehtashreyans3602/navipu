@@ -5,8 +5,8 @@ export const LocationContext = createContext();
 export const LocationProvider = ({ children }) => {
   const [selectedLocation, setSelectedLocation] = useState(null);
 
-  const selectLocation = (location) => {
-    setSelectedLocation(location);
+  const selectLocation = (placename) => {
+    setSelectedLocation(placename);
   };
 
   return (

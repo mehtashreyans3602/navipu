@@ -2,6 +2,7 @@
 import './App.css';
 import LoginButton from './components/login';
 import AdminMap from './components/AdminMap';
+import { LocationProvider } from "./context/Locationcontext";
 import Guestmap from "./components/Guestmap";
 import { useAuth0 } from "@auth0/auth0-react";
 function App() {
@@ -12,8 +13,9 @@ function App() {
 
 
       {!isAuthenticated ? <LoginButton logintext='login for admin only' /> : ''}
-      {isAuthenticated ? <AdminMap /> : <Guestmap />}
-
+      <LocationProvider>
+        {isAuthenticated ? <AdminMap /> : <Guestmap />}
+      </LocationProvider>
     </div>
   );
 }
