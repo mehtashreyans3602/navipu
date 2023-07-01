@@ -47,7 +47,7 @@ const AdminMap = ({ google }) => {
   // add locations here
   const locations = [
     { name: 'PIET', lat: 22.288552903578147, lng: 73.36402505636215 },
-    // { name: 'PIT', lat: 37.3352, lng: -121.8811 },
+    { name: 'PIT', lat: 22.286450795431087, lng: 73.36505234241486 },
     // { name: 'PIA', lat: 37.3352, lng: -121.8811 },
     // { name: 'PPI', lat: 37.3352, lng: -121.8811 },
     // { name: 'PID', lat: 37.3352, lng: -121.8811 },
@@ -66,10 +66,10 @@ const AdminMap = ({ google }) => {
   const pantocenter = () => {
     { map.panTo(center) }
   }
-  const mapclickevent = (marker, e) => {
-    pantocenter();
-    handleMarkerClick(marker, e);
-  }
+  // const mapclickevent = (marker, e) => {
+  //   pantocenter();
+  //   handleMarkerClick(marker, e);
+  // }
 
 
 
@@ -99,10 +99,13 @@ const AdminMap = ({ google }) => {
           <ControllPanel />
           <GoogleMap google={google} onClick={handleMapClick} mapContainerClassName='w-full h-full rounded-3xl relative' center={center} zoom={16} options={{ fullscreenControl: false, zoomControl: false, streetViewControl: false, map }} onLoad={map => setMap(map)}>
             {/* display marker and directions */}
-            <button onClick={mapclickevent} className="material-symbols-outlined text-xl absolute bg-green-400 p-2 m-4 rounded-3xl right-0 top-0 "> my_location
+            <button onClick={pantocenter} className="material-symbols-outlined text-xl absolute bg-green-400 p-2 m-4 rounded-3xl right-0 top-0 "> my_location
             </button>
             {selectedLocation && (
-              <Marker position={selectedLocation} />
+              <Marker  onClick={handleMarkerClick} icon={{
+                url: 'https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/map-marker-icon.png',
+                scaledSize: new google.maps.Size(30, 30),
+              }} position={selectedLocation} />
             )}
           </GoogleMap>
 
