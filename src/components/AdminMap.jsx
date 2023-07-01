@@ -48,9 +48,9 @@ const AdminMap = ({ google }) => {
   const locations = [
     { name: 'PIET', lat: 22.288552903578147, lng: 73.36402505636215 },
     { name: 'PIT', lat: 22.286450795431087, lng: 73.36505234241486 },
-    // { name: 'PIA', lat: 37.3352, lng: -121.8811 },
-    // { name: 'PPI', lat: 37.3352, lng: -121.8811 },
-    // { name: 'PID', lat: 37.3352, lng: -121.8811 },
+    { name: 'PIA', lat: 37.3352, lng: -121.8811 },
+    { name: 'PPI', lat: 37.3352, lng: -121.8811 },
+    { name: 'PID', lat: 37.3352, lng: -121.8811 },
     // Add more locations as needed
   ];
 
