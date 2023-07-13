@@ -10,6 +10,10 @@ const center = {
   lat: 22.288540,
   lng: 73.364620
 }
+const current = {
+  lat: 22.289041928439264,
+  lng: 73.36461392011063
+}
 
 
 const AdminMap = ({ google }) => {
@@ -48,14 +52,15 @@ const AdminMap = ({ google }) => {
   const locations = [
     { name: 'PIET', lat: 22.288552903578147, lng: 73.36402505636215 },
     { name: 'PIT', lat: 22.286450795431087, lng: 73.36505234241486 },
-    { name: 'PIA', lat: 37.3352, lng: -121.8811 },
-    { name: 'PPI', lat: 37.3352, lng: -121.8811 },
-    { name: 'PID', lat: 37.3352, lng: -121.8811 },
+    { name: 'PIA', lat: 22.294923562447774, lng: 73.36426377296448 },
+    { name: 'PPI', lat: 22.29100739126652, lng: 73.36597502231598 },
+    { name: 'PIP', lat: 22.288054059050943, lng: 73.36498260498047 },
     // Add more locations as needed
   ];
 
   const handleCardClick = (location) => {
     setSelectedLocation(location);
+    console.log('clicked');
     if (map && location) {
       const { lat, lng } = location;
       const newCenter = new google.maps.LatLng(lat, lng);
