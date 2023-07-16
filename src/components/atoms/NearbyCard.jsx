@@ -15,7 +15,7 @@ const NearbyCard = (props) => {
   return (
     <section onClick={handleCardClick} className='select-none group active:bg-blue-700  w-full  h-auto border-2 p-1 md:p-2 gap-2 border-blue-700 rounded-md md:rounded-2xl cursor-pointer '>
       {/* svg as asquare image holder */}
-      <img className='rounded-md md:rounded-2xl h-auto  object-cover' src="https://maps.gstatic.com/tactile/pane/default_geocode-2x.png" alt="placeholder image" />
+      <img className='rounded-md md:rounded-2xl h-auto  object-cover' src="https://maps.gstatic.com/tactile/pane/default_geocode-2x.png" alt="placeholder" />
       <p className=' text-sm truncate group-active:text-white'>{props.placename}</p>
     </section>
   )

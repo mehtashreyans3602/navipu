@@ -1,20 +1,15 @@
 import React, { useState } from 'react'
 import { useJsApiLoader, GoogleMap, Marker } from "@react-google-maps/api";
-// import Nearby from './Nearby';
 import Events from './Events';
 import Header from './Header';
 import ControllPanel from './atoms/ControllPanel';
+import Nearby from './Nearby';
 
 
 const center = {
   lat: 22.288540,
   lng: 73.364620
 }
-const current = {
-  lat: 22.289041928439264,
-  lng: 73.36461392011063
-}
-
 
 const AdminMap = ({ google }) => {
 
@@ -24,7 +19,6 @@ const AdminMap = ({ google }) => {
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: process.env.REACT_APP_MAPS_API_KEY,
   });
-
 
   const handleMarkerClick = (marker, e) => {
     if (marker && marker.getPosition) {
@@ -48,35 +42,9 @@ const AdminMap = ({ google }) => {
       </div> </div>;
   }
 
-  // add locations here
-  const locations = [
-    { name: 'PIET', lat: 22.288552903578147, lng: 73.36402505636215 },
-    { name: 'PIT', lat: 22.286450795431087, lng: 73.36505234241486 },
-    { name: 'PIA', lat: 22.294923562447774, lng: 73.36426377296448 },
-    { name: 'PPI', lat: 22.29100739126652, lng: 73.36597502231598 },
-    { name: 'PIP', lat: 22.288054059050943, lng: 73.36498260498047 },
-    // Add more locations as needed
-  ];
-
-  const handleCardClick = (location) => {
-    setSelectedLocation(location);
-    console.log('clicked');
-    if (map && location) {
-      const { lat, lng } = location;
-      const newCenter = new google.maps.LatLng(lat, lng);
-      map.panTo(newCenter);
-    }
-  };
-
   const pantocenter = () => {
-    { map.panTo(center) }
+    map.panTo(center)
   }
-  // const mapclickevent = (marker, e) => {
-  //   pantocenter();
-  //   handleMarkerClick(marker, e);
-  // }
-
-
 
   return (
     <section className='w-screen h-screen flex flex-col gap-2 md:gap-6 overflow-hidden'>
@@ -84,20 +52,7 @@ const AdminMap = ({ google }) => {
 
       <div className='w-full h-[100%] flex gap-2 md:gap-6'>
         {/* card wrapper nearby */}
-        <div className='overflow-hidden flex flex-col gap-2 w-[15%] md:w-[10%] h-full rounded-tr-3xl bg-blue-200 p-[1.7%] max-h-[800px]'>
-          <p className='font-sans font-semibold uppercase text-xs flex items-center'> Nearby</p>
-          {/* card container */}
-          <section className='h-[100%]  scroll-smooth rounded-md md:rounded-xl w-full flex flex-col gap-2 md:gap-4 overflow-y-scroll'>
-            {/* card items */}
-            {locations.map((location, index) => (
-              <section key={index} onClick={() => handleCardClick(location)} className='card select-none group active:bg-blue-700  w-full  h-auto border-2 p-1 md:p-2 gap-2 border-blue-700 rounded-md md:rounded-2xl cursor-pointer '>
-                {/* svg as asquare image holder */}
-                <img className='rounded-md md:rounded-2xl h-auto  object-cover' src="https://maps.gstatic.com/tactile/pane/default_geocode-2x.png" alt="placeholder image" />
-                <p className=' text-sm truncate group-active:text-white'>{location.name}</p>
-              </section>
-            ))}
-          </section>
-        </div>
+        <Nearby setSelectedLocation={setSelectedLocation} map={map} google={google} />
 
         {/* stage | google map */}
         <div className='flex w-[70%] h-full md:flex-col gap-y-2 md:gap-y-6 pb-2 md:pb-6 flex-col-reverse'>
@@ -107,7 +62,7 @@ const AdminMap = ({ google }) => {
             <button onClick={pantocenter} className="material-symbols-outlined text-xl absolute bg-green-400 p-2 m-4 rounded-3xl right-0 top-0 "> my_location
             </button>
             {selectedLocation && (
-              <Marker  onClick={handleMarkerClick} icon={{
+              <Marker onClick={handleMarkerClick} icon={{
                 url: 'https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/map-marker-icon.png',
                 scaledSize: new google.maps.Size(30, 30),
               }} position={selectedLocation} />
