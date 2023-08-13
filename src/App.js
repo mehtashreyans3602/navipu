@@ -9,10 +9,10 @@ function App() {
   const { isAuthenticated } = useAuth0();
 
   return (
-    <div className="App">
+    <div className="App w-full h-screen">
 
 
-      {!isAuthenticated ? <LoginButton logintext='login for admin only' /> : ''}
+      {!isAuthenticated ? <LoginButton logintext='Admin Entry' /> : ''}
       <LocationProvider>
         {isAuthenticated ? <AdminMap /> : <Guestmap />}
       </LocationProvider>
