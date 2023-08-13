@@ -12,10 +12,10 @@ const NearbyCard = (props) => {
     console.log('event clicked');
   };
   return (
-    <section onClick={handleCardClick} className='select-none group active:bg-blue-700 w-full h-auto border-2 p-1 md:p-2 gap-2 border-blue-700 rounded-md md:rounded-2xl cursor-pointer'>
+    <section onClick={handleCardClick} className='select-none group active:bg-[#78786a] border-[#78766a] border-2  bg-[#fcf9f1] group-active:border-[#78786a] group-active:border-2  w-full h-auto flex flex-col md:p-2 gap-2 justify-between rounded-md md:rounded-2xl cursor-pointer'>
       {/* svg as a square image holder */}
-      <img className='rounded-md md:rounded-2xl h-auto object-cover' src="https://maps.gstatic.com/tactile/pane/default_geocode-2x.png" alt="placeholder " />
-      <p className='text-sm truncate group-active:text-white'>{props.placename}</p>
+      <img className='rounded-md md:rounded-2xl w-full h-16 object-cover' src="https://maps.gstatic.com/tactile/pane/default_geocode-2x.png" alt="placeholder " />
+      <p className='text-sm group-active:text-white'>{props.placename}</p>
     </section>
   );
 };

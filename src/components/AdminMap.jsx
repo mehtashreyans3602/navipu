@@ -5,6 +5,7 @@ import Events from './Events';
 import Header from './Header';
 import ControllPanel from './atoms/ControllPanel';
 import { LocationContext } from "../context/Locationcontext";
+import AboutEventItem from './atoms/AboutEventItem';
 
 const center = {
   lat: 22.288540,
@@ -34,9 +35,9 @@ const AdminMap = () => {
     console.log('Clicked coordinates:', lat, lng);
   };
 
-  const onLoad = (marker) => {
-    console.log("marker: ", marker);
-  };
+  // const onLoad = (marker) => {
+  //   console.log("marker: ", marker);
+  // };
 
   if (!isLoaded) {
     return <div role="status" className="space-y-8 animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-center">
@@ -55,13 +56,14 @@ const AdminMap = () => {
           <ControllPanel />
           <GoogleMap onClick={handleMapClick} mapContainerClassName='w-full h-full rounded-3xl relative' center={center} zoom={18} options={{ fullscreenControl: false, zoomControl: false, streetViewControl: false, map }} onLoad={map => setMap(map)}>
             {/* display marker and directions */}
-            <button onClick={() => map.panTo(center)} className="material-symbols-outlined text-xl absolute bg-green-400 p-2 m-4 rounded-3xl right-0 top-0 "> my_location
-            </button>
-
+            {/* <button onClick={() => map.panTo(center)} className="material-symbols-outlined text-xl absolute bg-[#beecdd] p-2 m-4 rounded-3xl right-0 top-0 "> my_location
+            </button> */}
+            {/* display clicked event item card */}
+            <AboutEventItem/>
             {selectedLocation && (
               // <Marker onLoad={onLoad} position={markerposition} />
               // <Marker position={selectedLocation} />
-              <Marker onVisibleChanged={console.log('visible changed')}  position={{ lat: parseFloat(selectedLocation.lat), lng: parseFloat(selectedLocation.lng) }} onPositionChanged={console.log('position changed')} />
+              <Marker onVisibleChanged={console.log('visible changed')} position={{ lat: parseFloat(selectedLocation.lat), lng: parseFloat(selectedLocation.lng) }} onPositionChanged={console.log('position changed')} />
             )}
             {/* <Marker position={center} onPositionChanged={console.log('position changed')} /> */}
           </GoogleMap>
