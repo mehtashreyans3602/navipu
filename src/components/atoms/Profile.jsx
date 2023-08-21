@@ -8,14 +8,11 @@ const Profile = (props) => {
     return <div>Loading ...</div>;
   }
 
-
-
   return (
-    isAuthenticated && (
-      <div>
-       <p>{props.innertext},{isAuthenticated ? user.name : 'guest'}</p>
-      </div>
-    )
+    <div>
+      <p className="capitalize">{props.innertext}, <span className="font-bold uppercase">{isAuthenticated ? user.name : 'guest'}</span> </p>
+    </div>
+
   );
 };
 
