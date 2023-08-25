@@ -2,7 +2,7 @@ import React from 'react'
 
 const AboutEventItem = () => {
     return (
-        <section className=' overflow-y-auto bg-[#beecdd90] backdrop-blur-sm border-[#00201990] border-2 active:border-2 w-60 h-4/6 flex flex-col md:p-4 gap-y-4 justify-between rounded-md md:rounded-2xl cursor-pointer absolute right-5 top-5'>
+        <section className=' overflow-y-auto bg-[#beecdd90] backdrop-blur-sm border-[#00201990] border-2 active:border-2 w-60 h-4/6 flex flex-col md:p-4 gap-y-4 justify-between rounded-md md:rounded-2xl cursor-pointer '>
             {/* svg as a square image holder */}
             <img className='rounded-full w-full h-28 object-cover border-2 border-[#46492f]' src="https://maps.gstatic.com/tactile/pane/default_geocode-2x.png" alt="placeholder " />
             <div className='flex flex-col gap-y-1 items-start'>
