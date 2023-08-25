@@ -39,7 +39,9 @@ const AdminMap = () => {
               zoom: 15,
             }}
             style={{ width: ' 100%', height: ' 100%', borderRadius: '24px', border: "black solid " }}
-            mapStyle="mapbox://styles/aaryathakor/cllj5hwq6019s01qs83846lry"
+            mapStyle="mapbox://styles/mapbox/streets-v12"
+            // mapStyle="mapbox://styles/mapbox/streets-v10"
+            // mapStyle="mapbox://styles/aaryathakor/cllj5hwq6019s01qs83846lry"
           >
             <Marker latitude={latitude} longitude={longitude} anchor="center" >
               <span className='text-3xl'>&#128205;</span>
