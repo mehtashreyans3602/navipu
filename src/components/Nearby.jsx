@@ -1,59 +1,74 @@
-import React from 'react'
+import React, { useState } from 'react'
 import NearbyCard from "./atoms/NearbyCard";
-const Nearby = ({ setLatitude, setLongitude }) => {
-  const places = [
-    {
-      "id": 0,
-      "PlaceName": "PIET",
-      "Latitude": 40.7128,
-      "Longitude": -74.0060
-    },
-    {
-      "id": 1,
-      "PlaceName": "PIT",
-      "Latitude": 40.7128,
-      "Longitude": -74.0060
-    },
-    {
-      "id": 2,
-      "PlaceName": "PPI",
-      "Latitude": 40.7128,
-      "Longitude": -74.0060
-    },
-    {
-      "id": 3,
-      "PlaceName": "DS",
-      "Latitude": 40.7128,
-      "Longitude": -74.0060
-    },
-    {
-      "id": 4,
-      "PlaceName": "PIA",
-      "Latitude": 40.7128,
-      "Longitude": -74.0060
-    },
-    {
-      "id": 5,
-      "PlaceName": "PIP",
-      "Latitude": 40.7128,
-      "Longitude": -74.0060
-    },
-    {
-      "id": 6,
-      "PlaceName": "JNHMC",
-      "Latitude": 40.7128,
-      "Longitude": -74.0060
-    },
-    {
-      "id": 7,
-      "PlaceName": "PID",
-      "Latitude": 40.7128,
-      "Longitude": -74.0060
-    },
-  ];
+const places = [
+  {
+    "id": 0,
+    "PlaceName": "PIET",
+    "Latitude": 22.288767,
+    "Longitude": 73.363816
+
+  },
+  {
+    "id": 1,
+    "PlaceName": "PIT",
+    "Latitude": 22.286235,
+    "Longitude": 73.364526
+
+  },
+  {
+    "id": 2,
+    "PlaceName": "PPI",
+    "Latitude": 22.290872,
+    "Longitude": 73.366111
+  },
+  {
+    "id": 3,
+    "PlaceName": "DS",
+    "Latitude": 22.289611,
+    "Longitude": 73.363880
+
+  },
+  {
+    "id": 4,
+    "PlaceName": "PIA",
+    "Latitude": 22.289155,
+    "Longitude": 73.363381
+
+  },
+  {
+    "id": 5,
+    "PlaceName": "PIP",
+    "Latitude": 22.288021,
+    "Longitude": 73.364939
+
+  },
+  {
+    "id": 6,
+    "PlaceName": "JNHMC",
+    "Latitude": 22.290665,
+    "Longitude": 73.365530
 
 
 
+  },
+  {
+    "id": 7,
+    "PlaceName": "PID",
+    "Latitude": 22.294705,
+    "Longitude": 73.364442
+
+
+
+  }
+];
+
+
+const Nearby = ({ onCardClick }) => {
+
+  const handleCardClick = (place) => {
+    // Pass the clicked place's coordinates to the parent component
+    onCardClick(place.Latitude, place.Longitude);
+  };
   return (
 
 
@@ -68,12 +83,13 @@ from here things will change a little */}
           <NearbyCard
             key={data.id}
             PlaceName={data.PlaceName}
-            setLatitude={setLatitude}
-            setLongitude={setLongitude}
+            setLatitude={data.Latitude}
+            setLongitude={data.Longitude}
+            onClick={() => handleCardClick(data)}
           />
         ))}
 
-        {/* <NearbyCard  PlaceName='PIET' setLatitude={setLatitude} setLongitude={setLongitude}/> */}
+        {/* <NearbyCard   PlaceName='PIET' setLatitude={setLatitude} setLongitude={setLongitude}/> */}
         {/* <NearbyCard placename='PIET' lat="22.28878772337861" lng="73.36346800799352" /> */}
         {/* Add more NearbyCard components here */}
       </section>
