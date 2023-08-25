@@ -10,6 +10,7 @@ function App() {
   const { isAuthenticated, user } = useAuth0();
 
   function authi() {
+    // these are the allowed accounts for admin add your sub
     var subacc = [
       'google-oauth2|106746765731439499987',
     ]
