@@ -27,7 +27,8 @@ function App() {
         {/* {authi() ? <h1>{user.name}</h1> : <h2>invalid user</h2>}
         {authi() ? console.table(user) : console.log('invalid user')} */}
 
-        {authi() ? <AdminMap /> : <Guestmap />}
+        <AdminMap />
+        {/* {authi() ? <AdminMap /> : <Guestmap />} */}
       </LocationProvider>
     </div>
   );
