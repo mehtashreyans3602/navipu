@@ -1,6 +1,7 @@
 // eslint-disable-next-line
 import React, { useState } from 'react'
 import Nearby from './Nearby';
+import Events from './Events';
 import Header from './Header';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { Map, Marker } from 'react-map-gl';
@@ -25,10 +26,10 @@ const AdminMap = () => {
   return (
     <section className='w-screen h-screen flex flex-col gap-2 md:gap-6 overflow-hidden'>
       <Header />
-      <div className='w-full h-[100%] flex gap-2 md:gap-6 pr-6'>
+      <div className='w-full h-[100%] flex gap-2 md:gap-6'>
         <Nearby />
         {/* <Nearby setLatitude={idk} setLongitude={idk} /> */}
-        <div className='flex w-full h-full md:flex-col gap-y-2 md:gap-y-6 pb-2 md:pb-6 flex-col-reverse'>
+        <div className='flex w-[70%] h-full md:flex-col gap-y-2 md:gap-y-6 pb-2 md:pb-6 flex-col-reverse'>
           <Map
 
             mapboxAccessToken={token}
@@ -37,7 +38,7 @@ const AdminMap = () => {
               longitude: center.lng,
               zoom: 15,
             }}
-            style={{ width: ' 100%', height: ' 100%', borderRadius: '24px' }}
+            style={{ width: ' 100%', height: ' 100%', borderRadius: '24px', border: "black solid " }}
             mapStyle="mapbox://styles/aaryathakor/cllj5hwq6019s01qs83846lry"
           >
             <Marker latitude={latitude} longitude={longitude} anchor="center" >
@@ -45,7 +46,7 @@ const AdminMap = () => {
             </Marker>
           </Map>
         </div>
-
+        <Events />
       </div>
     </section >
   )

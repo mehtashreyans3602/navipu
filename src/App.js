@@ -4,7 +4,7 @@ import LoginButton from './components/login';
 import AdminMap from './components/AdminMap';
 import { LocationProvider } from "./context/Locationcontext";
 import Guestmap from "./components/Guestmap";
-import { useAuth0 } from "@auth0/auth0-react";
+import { User, useAuth0 } from "@auth0/auth0-react";
 
 function App() {
   const { isAuthenticated, user } = useAuth0();
