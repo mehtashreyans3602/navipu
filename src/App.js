@@ -9,13 +9,13 @@ import { useAuth0 } from "@auth0/auth0-react";
 function App() {
   const { isAuthenticated, user } = useAuth0();
 
-  function authi() {
-    var subacc = [
+  function Auth() {
+    // these are the allowed accounts for admin add your sub
+    const SubAcc = [
       'google-oauth2|106746765731439499987',
     ]
-    return isAuthenticated && subacc.includes(user.sub);
+    return isAuthenticated && SubAcc.includes(user.sub);
   }
-
 
   return (
     <div className="App w-full h-screen">
@@ -23,10 +23,11 @@ function App() {
 
       {!isAuthenticated ? <LoginButton logintext='Admin Entry' /> : ''}
       <LocationProvider>
-        {/* {authi() ? <h1>{user.name}</h1> : <h2>invalid user</h2>}
-        {authi() ? console.table(user) : console.log('invalid user')} */}
+        {/*{Auth() ? <h1>{user.name}</h1> : <h2>invalid user</h2>}*/}
+        {Auth() ? console.table(user) : console.log('invalid user')}
 
-        {authi() ? <AdminMap /> : <Guestmap />}
+        {/* <AdminMap /> */}
+        {Auth() ? <AdminMap /> : <Guestmap />}
       </LocationProvider>
     </div>
   );
