@@ -1,7 +1,7 @@
 // eslint-disable-next-line
 import React, { useState } from 'react'
 import Nearby from './Nearby';
-import Events from './Events';
+// import Events from './Events';
 import Header from './Header';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { Map, Marker } from 'react-map-gl';
@@ -27,7 +27,7 @@ const AdminMap = () => {
       <div className='w-full h-[100%] flex gap-2 md:gap-6'>
         <Nearby onCardClick={handleCardClick} />
         {/* <Nearby setLatitude={idk} setLongitude={idk} /> */}
-        <div className='flex w-[70%] h-full md:flex-col gap-y-2 md:gap-y-6 pb-2 md:pb-6 flex-col-reverse'>
+        <div className='flex w-[85%] h-full md:flex-col gap-y-2 md:gap-y-6 pb-2 md:pb-6 flex-col-reverse'>
           <Map
 
             mapboxAccessToken={Token}
@@ -36,7 +36,7 @@ const AdminMap = () => {
               longitude: Long, // Use Long variable
               zoom: 15,
             }}
-            style={{ width: ' 100%', height: ' 100%', borderRadius: '24px', border: "black solid " }}
+            style={{ width: '100%', height: '100%', borderRadius: '24px', border: "black solid " }}
             mapStyle="mapbox://styles/mapbox/streets-v12"
           // mapStyle="mapbox://styles/mapbox/streets-v10"
           // mapStyle="mapbox://styles/aaryathakor/cllj5hwq6019s01qs83846lry"
@@ -46,7 +46,7 @@ const AdminMap = () => {
             </Marker>
           </Map>
         </div>
-        <Events />
+        {/*<Events />*/}
       </div>
     </section >
   )

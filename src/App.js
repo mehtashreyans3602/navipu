@@ -24,7 +24,7 @@ function App() {
       {!isAuthenticated ? <LoginButton logintext='Admin Entry' /> : ''}
       <LocationProvider>
         {/*{Auth() ? <h1>{user.name}</h1> : <h2>invalid user</h2>}*/}
-        {authi() ? console.table(user) : console.log('invalid user')}
+        {Auth() ? console.table(user) : console.log('invalid user')}
 
         {/* <AdminMap /> */}
         {Auth() ? <AdminMap /> : <Guestmap />}
