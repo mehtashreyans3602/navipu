@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/navipu/static/css/main.10129e6b.css",
-    "main.js": "/navipu/static/js/main.b6fc901a.js",
+    "main.css": "/navipu/static/css/main.ff65c277.css",
+    "main.js": "/navipu/static/js/main.6010f329.js",
     "static/js/483.3226423a.chunk.js": "/navipu/static/js/483.3226423a.chunk.js",
     "static/js/787.4a44f555.chunk.js": "/navipu/static/js/787.4a44f555.chunk.js",
     "index.html": "/navipu/index.html",
-    "main.10129e6b.css.map": "/navipu/static/css/main.10129e6b.css.map",
-    "main.b6fc901a.js.map": "/navipu/static/js/main.b6fc901a.js.map",
+    "main.ff65c277.css.map": "/navipu/static/css/main.ff65c277.css.map",
+    "main.6010f329.js.map": "/navipu/static/js/main.6010f329.js.map",
     "483.3226423a.chunk.js.map": "/navipu/static/js/483.3226423a.chunk.js.map",
     "787.4a44f555.chunk.js.map": "/navipu/static/js/787.4a44f555.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.10129e6b.css",
-    "static/js/main.b6fc901a.js"
+    "static/css/main.ff65c277.css",
+    "static/js/main.6010f329.js"
   ]
 }
