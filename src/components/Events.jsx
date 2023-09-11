@@ -1,7 +1,7 @@
 import React from "react";
 import { events } from "./Data";
 import EventsCard from "./atoms/EventsCard";
-import AboutEventItem from "./atoms/AboutEventItem";
+// import AboutEventItem from "./atoms/AboutEventItem";
 const Events = () => {
   return (
     <div className=" w-[20%] h-full rounded-tl-3xl overflow-y-auto bg-[#fcf9f1] border-[#78786a] flex flex-col items-center gap-y-6 border-2 border-r-0 border-b-0 p-[1.7%]">
