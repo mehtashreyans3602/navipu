@@ -2,48 +2,72 @@ export const places = [
   {
     id: 0,
     PlaceName: "PIET",
+    PlaceDescription:
+      " Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. ",
+    PlaceImage: "https://maps.gstatic.com/tactile/pane/default_geocode-2x.png",
     Latitude: 22.288767,
     Longitude: 73.363816,
   },
   {
     id: 1,
     PlaceName: "PIT",
+    PlaceDescription:
+      " Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. ",
+    PlaceImage: "https://maps.gstatic.com/tactile/pane/default_geocode-2x.png",
     Latitude: 22.286235,
     Longitude: 73.364526,
   },
   {
     id: 2,
     PlaceName: "PPI",
+    PlaceDescription:
+      " Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. ",
+    PlaceImage: "https://maps.gstatic.com/tactile/pane/default_geocode-2x.png",
     Latitude: 22.290872,
     Longitude: 73.366111,
   },
   {
     id: 3,
     PlaceName: "DS",
+    PlaceDescription:
+      " Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. ",
+    PlaceImage: "https://maps.gstatic.com/tactile/pane/default_geocode-2x.png",
     Latitude: 22.289611,
     Longitude: 73.36388,
   },
   {
     id: 4,
     PlaceName: "PIA",
+    PlaceDescription:
+      " Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. ",
+    PlaceImage: "https://maps.gstatic.com/tactile/pane/default_geocode-2x.png",
     Latitude: 22.289155,
     Longitude: 73.363381,
   },
   {
     id: 5,
     PlaceName: "PIP",
+    PlaceDescription:
+      " Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. ",
+    PlaceImage: "https://maps.gstatic.com/tactile/pane/default_geocode-2x.png",
     Latitude: 22.288021,
     Longitude: 73.364939,
   },
   {
     id: 6,
     PlaceName: "JNHMC",
+    PlaceDescription:
+      " Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. ",
+    PlaceImage: "https://maps.gstatic.com/tactile/pane/default_geocode-2x.png",
     Latitude: 22.290665,
     Longitude: 73.36553,
   },
   {
     id: 7,
     PlaceName: "PID",
+    PlaceDescription:
+      " Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. ",
+    PlaceImage: "https://maps.gstatic.com/tactile/pane/default_geocode-2x.png",
     Latitude: 22.294705,
     Longitude: 73.364442,
   },
