@@ -3,27 +3,25 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { Auth0Provider } from '@auth0/auth0-react';
+import {Auth0Provider} from '@auth0/auth0-react';
 // import env from "react-dotenv";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 // const envdomain = env.REACT_APP_DOMAIN;
 // const envclient = env.REACT_APP_CLIENDID;
-root.render(
-  <React.StrictMode>
+root.render(<React.StrictMode>
     <Auth0Provider
-    // access dot env variables
+        // access dot env variables
 
-      domain={process.env.REACT_APP_DOMAIN}
-      clientId={process.env.REACT_APP_CLIENT_ID}
-      authorizationParams={{
-        redirect_uri: window.location.origin
-      }}>
-      <App />
+        domain={process.env.REACT_APP_DOMAIN}
+        clientId={process.env.REACT_APP_CLIENT_ID}
+        authorizationParams={{
+            redirect_uri: window.location.origin
+        }}>
+        <App/>
     </Auth0Provider>
-  </React.StrictMode >
-);
+</React.StrictMode>);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
