@@ -2,7 +2,7 @@
   "name": "navipu",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://thakoraarya.github.io/navipu",
+  "homepage": "https://thakoraarya.github.io/navipu/guest/",
   "dependencies": {
     "@auth0/auth0-react": "^2.1.1",
     "@react-buddy/ide-toolbox": "^2.4.0",
@@ -21,6 +21,7 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
+    "format": "prettier --write .",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

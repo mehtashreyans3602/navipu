@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Guestmap = () => {
-    return (
-        <div>Guestmap</div>
-    )
-}
+  return <div>Guestmap</div>;
+};
 
-export default Guestmap
+export default Guestmap;
