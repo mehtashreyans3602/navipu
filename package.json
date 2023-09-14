@@ -2,7 +2,7 @@
   "name": "navipu",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://thakoraarya.github.io/navipu/guest/",
+  "homepage": "https://thakoraarya.github.io/navipu/",
   "dependencies": {
     "@auth0/auth0-react": "^2.1.1",
     "@react-buddy/ide-toolbox": "^2.4.0",
