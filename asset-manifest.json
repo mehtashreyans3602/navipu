@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/navipu/static/css/main.89940d2d.css",
-    "main.js": "/navipu/static/js/main.c8d96c35.js",
-    "static/js/483.3226423a.chunk.js": "/navipu/static/js/483.3226423a.chunk.js",
-    "static/js/787.4a44f555.chunk.js": "/navipu/static/js/787.4a44f555.chunk.js",
-    "index.html": "/navipu/index.html",
-    "main.89940d2d.css.map": "/navipu/static/css/main.89940d2d.css.map",
-    "main.c8d96c35.js.map": "/navipu/static/js/main.c8d96c35.js.map",
-    "483.3226423a.chunk.js.map": "/navipu/static/js/483.3226423a.chunk.js.map",
-    "787.4a44f555.chunk.js.map": "/navipu/static/js/787.4a44f555.chunk.js.map"
+    "main.css": "https://mehtashreyans3602.github.io/navipu/static/css/main.89940d2d.css",
+    "main.js": "https://mehtashreyans3602.github.io/navipu/static/js/main.3d65a551.js",
+    "static/js/483.adcc7b43.chunk.js": "https://mehtashreyans3602.github.io/navipu/static/js/483.adcc7b43.chunk.js",
+    "static/js/787.4a44f555.chunk.js": "https://mehtashreyans3602.github.io/navipu/static/js/787.4a44f555.chunk.js",
+    "index.html": "https://mehtashreyans3602.github.io/navipu/index.html",
+    "main.89940d2d.css.map": "https://mehtashreyans3602.github.io/navipu/static/css/main.89940d2d.css.map",
+    "main.3d65a551.js.map": "https://mehtashreyans3602.github.io/navipu/static/js/main.3d65a551.js.map",
+    "483.adcc7b43.chunk.js.map": "https://mehtashreyans3602.github.io/navipu/static/js/483.adcc7b43.chunk.js.map",
+    "787.4a44f555.chunk.js.map": "https://mehtashreyans3602.github.io/navipu/static/js/787.4a44f555.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.89940d2d.css",
-    "static/js/main.c8d96c35.js"
+    "static/js/main.3d65a551.js"
   ]
 }
