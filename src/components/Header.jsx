@@ -12,14 +12,14 @@ const Header = () => {
         <Profile innertext="welcome" />
       )}
       <h1 className="text-3xl font-bold">NAVIPU</h1>
-      <button
-        className=" bg-[#ddeb78] text-[#1a1e00] px-4 py-2 rounded-3xl"
-        onClick={() =>
-          logout({ logoutParams: { returnTo: window.location.origin } })
-        }
-      >
-        Log Out
-      </button>
+      {/*<button*/}
+      {/*  className=" bg-[#ddeb78] text-[#1a1e00] px-4 py-2 rounded-3xl"*/}
+      {/*  onClick={() =>*/}
+      {/*    logout({ logoutParams: { returnTo: window.location.origin } })*/}
+      {/*  }*/}
+      {/*>*/}
+      {/*  Log Out*/}
+      {/*</button>*/}
     </section>
   );
 };
