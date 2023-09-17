@@ -18,9 +18,7 @@ root.render(
       domain={process.env.REACT_APP_DOMAIN}
       clientId={process.env.REACT_APP_CLIENT_ID}
       authorizationParams={{
-        redirect_uri:
-          // "https://www.localhost:3000/navipu" ||
-          "https://mehtashreyans3602.github.io/navipu/",
+        redirect_uri: window.location.href,
       }}
     >
       <App />
