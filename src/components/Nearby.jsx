@@ -12,19 +12,19 @@ const Nearby = ({ onCardClick }) => {
     setSelectedPlace(place);
   };
   return (
-    <div className="overflow-hidden flex flex-col items-center gap-2 w-min pb-5 h-auto rounded-tr-3xl border-l-0 border-b-0  bg-[#fcf9f1] border-[#78786a] border-2 gap-y-6 p-[1.7%]">
-      <div className="font-mono w-auto font-medium uppercase gap-x-4 text-2xl flex items-start">
+    <div className="overflow-hidden flex flex-col items-center gap-2 max-w-min min-w-min pb-5 h-auto rounded-tr-3xl border-l-0 border-b-0  bg-[#fcf9f1] border-[#78786a] border-2 gap-y-6 p-[1.7%]">
+      <div className="font-mono  items-center font-medium uppercase gap-x-4 text-2xl w-min flex">
         {selectedPlace && (
           <span
             onClick={() => setSelectedPlace(null)}
-            className="material-symbols-outlined font-semibold text-2xl w-fit"
+            className="material-symbols-outlined cursor-pointer font-semibold text-xl w-fit"
           >
             arrow_back
           </span>
         )}
         Nearby
       </div>
-      <section className="h-[45rem] scroll-smooth rounded-t-md md:rounded-t-xl w-full flex flex-col gap-2 md:gap-4 overflow-y-scroll">
+      <section className="h-[45rem] scroll-smooth w-full flex flex-col gap-4 overflow-y-scroll">
         {selectedPlace ? (
           <PlaceDetail
             PlaceName={selectedPlace.PlaceName}

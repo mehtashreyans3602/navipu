@@ -7,6 +7,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/*make scrollbar invisible*/
+*::-webkit-scrollbar {
+  display: none;
+  /*width: 1px;*/
+  /*position: absolute;*/
+  /*background: transparent;*/
+  /*opacity: 0;*/
+  /*scrollbar-width: none; !* Firefox *!*/
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

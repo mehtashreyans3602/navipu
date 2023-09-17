@@ -2,16 +2,15 @@ import React from "react";
 
 const NearbyCard = ({ PlaceName, setLatitude, setLongitude, onClick }) => {
   const handleCardClick = () => {
-    console.log("Latitude:", setLatitude);
-    console.log("Longitude:", setLongitude);
+    // console.log("Latitude:", setLatitude);
+    // console.log("Longitude:", setLongitude);
 
     onClick(setLatitude, setLongitude);
   };
-
   return (
     <section
       onClick={handleCardClick}
-      className="select-none group active:bg-[#78786a] border-[#78766a] border-2  bg-[#fcf9f1] group-active:border-[#78786a] group-active:border-2  w-full h-auto flex flex-col md:p-2 gap-2 justify-between rounded-md md:rounded-2xl cursor-pointer"
+      className="select-none group active:bg-[#78786a] bg-[#fcf9f1]  w-full h-auto flex flex-col  gap-2 justify-between rounded-md md:rounded-2xl cursor-pointer"
     >
       {/* svg as a square image holder */}
       <img
