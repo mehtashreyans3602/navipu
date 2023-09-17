@@ -4,6 +4,7 @@ import Events from "./Events";
 import Header from "./Header";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { Map, Marker } from "react-map-gl";
+import mapboxgl from "mapbox-gl"; // Import Mapbox GL
 
 const center = {
   lat: 22.28854,
@@ -12,9 +13,16 @@ const center = {
 
 const Token =
   "pk.eyJ1IjoiYWFyeWF0aGFrb3IiLCJhIjoiY2xsM2M3dmMzMDZqOTNjbjJjZzg1ZXdpMCJ9.MUVljcF8mCYtARAUWXeVFA";
+
 const AdminMap = () => {
   const [Lat, setLatitude] = useState(center.lat);
   const [Long, setLongitude] = useState(center.lng);
+  const [mapCenter, setMapCenter] = useState({
+    latitude: Lat,
+    longitude: Long,
+  });
+
+  mapboxgl.accessToken = Token;
 
   // keep the marker in the center of the map
   useEffect(() => {
@@ -26,11 +34,9 @@ const AdminMap = () => {
     setMapCenter(keepCenter);
   }, [Lat, Long]);
 
-  const [mapCenter, setMapCenter] = useState({
-    latitude: Lat,
-    longitude: Long,
-    zoom: 15,
-  });
+  useEffect(() => {
+    console.log("initialViewState updated:", mapCenter);
+  }, [mapCenter]);
 
   const handleCardClick = (newLat, newLng) => {
     // Update the map marker position
@@ -42,11 +48,15 @@ const AdminMap = () => {
       <Header />
       <section className="w-full h-[90%] flex gap-6 justify-between items-stretch ">
         <Nearby onCardClick={handleCardClick} />
-        {/* <Nearby setLatitude={idk} setLongitude={idk} /> */}
         <section className="flex w-[85%] h-auto pb-4 gap-y-6 ">
           <Map
             mapboxAccessToken={Token}
-            initialViewState={mapCenter}
+            initialViewState={{
+              latitude: Lat,
+              longitude: Long,
+              zoom: 15,
+              dragPan: true,
+            }}
             style={{
               width: "100%",
               height: "auto",
@@ -54,7 +64,7 @@ const AdminMap = () => {
               border: "black solid ",
             }}
             // mapStyle="mapbox://styles/mapbox/streets-v12
-            mapStyle="mapbox://styles/mapbox/satellite-streets-v11"
+            mapStyle="mapbox://styles/mapbox/satellite-streets-v12"
             // mapStyle="mapbox://styles/mapbox/dark-v10"
             // mapStyle="mapbox://styles/aaryathakor/cllj5hwq6019s01qs83846lry"
           >
