@@ -44,9 +44,9 @@ const AdminMap = () => {
     setLongitude(newLng);
   };
   return (
-    <section className="w-screen h-full flex flex-col gap-y-4 bg-[#fcf9f1] justify-start overflow-auto">
+    <section className="w-screen h-screen flex flex-col gap-y-4 bg-[#fcf9f1] justify-start overflow-auto">
       <Header />
-      <section className="w-auto h-[90%] flex gap-6 justify-between items-stretch ">
+      <section className="w-auto h-[87%] flex gap-6 justify-between items-stretch ">
         <Nearby onCardClick={handleCardClick} />
         <section className="flex-1 flex w-full h-auto pb-4 gap-y-6 ">
           <Map
@@ -65,8 +65,8 @@ const AdminMap = () => {
             }}
             // mapStyle="mapbox://styles/mapbox/streets-v12
             mapStyle="mapbox://styles/mapbox/satellite-streets-v12"
-            // mapStyle="mapbox://styles/mapbox/dark-v10"
-            // mapStyle="mapbox://styles/aaryathakor/cllj5hwq6019s01qs83846lry"
+          // mapStyle="mapbox://styles/mapbox/dark-v10"
+          // mapStyle="mapbox://styles/aaryathakor/cllj5hwq6019s01qs83846lry"
           >
             <Marker latitude={Lat} longitude={Long} anchor="top">
               <span className="text-3xl shadow-amber-200 ">&#128205;</span>

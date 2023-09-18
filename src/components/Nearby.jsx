@@ -43,9 +43,7 @@ const Nearby = ({ onCardClick }) => {
           ))
         )}
 
-        {/* <NearbyCard   PlaceName='PIET' setLatitude={setLatitude} setLongitude={setLongitude}/> */}
-        {/* <NearbyCard placename='PIET' lat="22.28878772337861" lng="73.36346800799352" /> */}
-        {/* Add more NearbyCard components here */}
+
       </section>
     </div>
   );
