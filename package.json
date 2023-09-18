@@ -44,7 +44,6 @@
     ]
   },
   "devDependencies": {
-    "babel-preset-react-app": "^10.0.1",
     "dotenv": "^16.3.1",
     "tailwindcss": "^3.3.2"
   }
