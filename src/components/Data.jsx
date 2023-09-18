@@ -84,7 +84,7 @@ export const events = [
     ],
     eventName: "Event 1",
     eventDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Gorem ipsum dolor sit amet, consectetur adipiscing elit. Gorem ipsum dolor sit amet, consectetur adipiscing elit.",
     placeName: "Parul University Campus",
     date: "2023-09-15",
     placeLocation: {
@@ -113,24 +113,6 @@ export const events = [
       },
       {
         id: 1,
-        queryPointType: "Auditorium",
-        queryPointDescription:
-          "The event will take place in the university's auditorium.",
-        queryPointLocation: {
-          latitude: 22.291,
-          longitude: 73.1628,
-        },
-      }, {
-        id: 2,
-        queryPointType: "Auditorium",
-        queryPointDescription:
-          "The event will take place in the university's auditorium.",
-        queryPointLocation: {
-          latitude: 22.291,
-          longitude: 73.1628,
-        },
-      }, {
-        id: 3,
         queryPointType: "Auditorium",
         queryPointDescription:
           "The event will take place in the university's auditorium.",
