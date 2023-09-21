@@ -80,10 +80,11 @@ export const events = [
       "https://maps.gstatic.com/tactile/pane/default_geocode-2x.png",
       "https://maps.gstatic.com/tactile/pane/default_geocode-2x.png",
       "https://maps.gstatic.com/tactile/pane/default_geocode-2x.png",
+      "https://maps.gstatic.com/tactile/pane/default_geocode-2x.png",
     ],
     eventName: "Event 1",
     eventDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Gorem ipsum dolor sit amet, consectetur adipiscing elit. Gorem ipsum dolor sit amet, consectetur adipiscing elit.",
     placeName: "Parul University Campus",
     date: "2023-09-15",
     placeLocation: {
@@ -98,6 +99,16 @@ export const events = [
         queryPointLocation: {
           latitude: 22.2906,
           longitude: 73.1622,
+        },
+      },
+      {
+        id: 1,
+        queryPointType: "Auditorium",
+        queryPointDescription:
+          "The event will take place in the university's auditorium.",
+        queryPointLocation: {
+          latitude: 22.291,
+          longitude: 73.1628,
         },
       },
       {

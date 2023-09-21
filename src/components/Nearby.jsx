@@ -12,7 +12,7 @@ const Nearby = ({ onCardClick }) => {
     setSelectedPlace(place);
   };
   return (
-    <div className="overflow-hidden flex flex-col items-center gap-2 max-w-min min-w-min pb-5 h-auto rounded-tr-3xl border-l-0 border-b-0  bg-[#fcf9f1] border-[#78786a] border-2 gap-y-6 p-[1.7%]">
+    <div className=" overflow-hidden flex flex-col items-center gap-2 max-w-min min-w-min pb-5 h-auto rounded-tr-3xl border-l-0 border-b-0  bg-[#fcf9f1] border-[#78786a] border-2 gap-y-6 p-[1.7%]">
       <div className="font-mono  items-center font-medium uppercase gap-x-4 text-2xl w-min flex">
         {selectedPlace && (
           <span
@@ -43,9 +43,7 @@ const Nearby = ({ onCardClick }) => {
           ))
         )}
 
-        {/* <NearbyCard   PlaceName='PIET' setLatitude={setLatitude} setLongitude={setLongitude}/> */}
-        {/* <NearbyCard placename='PIET' lat="22.28878772337861" lng="73.36346800799352" /> */}
-        {/* Add more NearbyCard components here */}
+
       </section>
     </div>
   );
