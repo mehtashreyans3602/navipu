@@ -16,8 +16,8 @@ function App() {
 
   return (
     <div className="App w-full h-screen flex justify-center items-center p-0 m-0">
-      {/*{Auth() ? <AdminMap /> : <LoginButton logintext="Admin Entry" />}*/}
       <AdminMap />
+      {/* {Auth() ? <AdminMap /> : <LoginButton logintext="Admin Entry" />} */}
     </div>
   );
 }

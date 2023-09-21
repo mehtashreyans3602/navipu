@@ -2,10 +2,9 @@
   "name": "navipu",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mehtashreyans3602.github.io/navipu",
+  "homepage": "https://mehtashreyans3602.github.io/navipu/",
   "dependencies": {
     "@auth0/auth0-react": "^2.1.1",
-    "@react-buddy/ide-toolbox": "^2.4.0",
     "@react-google-maps/api": "^2.18.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -46,7 +45,6 @@
     ]
   },
   "devDependencies": {
-    "babel-preset-react-app": "^10.0.1",
     "dotenv": "^16.3.1",
     "gh-pages": "^6.0.0",
     "prettier": "^3.0.3",
