@@ -1,0 +1,17 @@
+Index: package.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\n  \"name\": \"navipu\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"homepage\": \"https://thakoraarya.github.io/navipu\",\n  \"dependencies\": {\n    \"@auth0/auth0-react\": \"^2.1.1\",\n    \"@react-buddy/ide-toolbox\": \"^2.4.0\",\n    \"@react-google-maps/api\": \"^2.18.1\",\n    \"@testing-library/jest-dom\": \"^5.16.5\",\n    \"@testing-library/react\": \"^13.4.0\",\n    \"@testing-library/user-event\": \"^13.5.0\",\n    \"mapbox-gl\": \"^2.15.0\",\n    \"react\": \"^18.2.0\",\n    \"react-dom\": \"^18.2.0\",\n    \"react-dotenv\": \"^0.1.3\",\n    \"react-map-gl\": \"^7.1.5\",\n    \"react-scripts\": \"5.0.1\",\n    \"web-vitals\": \"^2.1.4\"\n  },\n  \"scripts\": {\n    \"predeploy\": \"npm run build\",\n    \"deploy\": \"gh-pages -d build\",\n    \"start\": \"react-scripts start\",\n    \"build\": \"react-scripts build\",\n    \"test\": \"react-scripts test\",\n    \"eject\": \"react-scripts eject\"\n  },\n  \"eslintConfig\": {\n    \"extends\": [\n      \"react-app\",\n      \"react-app/jest\"\n    ]\n  },\n  \"browserslist\": {\n    \"production\": [\n      \">0.2%\",\n      \"not dead\",\n      \"not op_mini all\"\n    ],\n    \"development\": [\n      \"last 1 chrome version\",\n      \"last 1 firefox version\",\n      \"last 1 safari version\"\n    ]\n  },\n  \"devDependencies\": {\n    \"babel-preset-react-app\": \"^10.0.1\",\n    \"dotenv\": \"^16.3.1\",\n    \"gh-pages\": \"^6.0.0\",\n    \"prettier\": \"3.0.3\",\n    \"tailwindcss\": \"^3.3.2\"\n  }\n}\n
+===================================================================
+diff --git a/package.json b/package.json
+--- a/package.json	
++++ b/package.json	
+@@ -2,7 +2,7 @@
+   "name": "navipu",
+   "version": "0.1.0",
+   "private": true,
+-  "homepage": "https://thakoraarya.github.io/navipu",
++  "homepage": "https://thakoraarya.github.io/navipu/guest",
+   "dependencies": {
+     "@auth0/auth0-react": "^2.1.1",
+     "@react-buddy/ide-toolbox": "^2.4.0",
