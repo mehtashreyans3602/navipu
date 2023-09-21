@@ -9,12 +9,12 @@ const Profile = (props) => {
   }
 
   return (
-    <div>
+    <div className="w-auto">
       <p className="capitalize">
         {props.innertext},{" "}
         <span className="font-bold uppercase">
-          {isAuthenticated ? user.name : "guest"}
-        </span>{" "}
+          {isAuthenticated ? user.nickname : "guest"}
+        </span>
       </p>
     </div>
   );
