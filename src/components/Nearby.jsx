@@ -12,7 +12,7 @@ const Nearby = ({ onCardClick }) => {
     setSelectedPlace(place);
   };
   return (
-    <div className=" overflow-hidden flex flex-col items-center gap-2 max-w-min min-w-min pb-5 h-auto rounded-tr-3xl border-l-0 border-b-0  bg-[#fcf9f1] border-[#78786a] border-2 gap-y-6 p-[1.7%]">
+    <div className=" overflow-hidden flex flex-col items-center gap-2 max-w-min min-w-min pb-5 h-auto rounded-tr-3xl border-l-0 border-b-0   border-[#78786a] border-2 gap-y-6 p-[1.7%]">
       <div className="font-mono  items-center font-medium uppercase gap-x-4 text-2xl w-min flex">
         {selectedPlace && (
           <span
@@ -24,7 +24,7 @@ const Nearby = ({ onCardClick }) => {
         )}
         Nearby
       </div>
-      <section className="h-[45rem] scroll-smooth w-full flex flex-col gap-4 overflow-y-scroll">
+      <section className="h-[44rem] scroll-smooth w-full flex flex-col gap-4 overflow-y-scroll">
         {selectedPlace ? (
           <PlaceDetail
             PlaceName={selectedPlace.PlaceName}
@@ -42,8 +42,6 @@ const Nearby = ({ onCardClick }) => {
             />
           ))
         )}
-
-
       </section>
     </div>
   );
