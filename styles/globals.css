@@ -22,6 +22,6 @@
   display: none;
 }
 body {
-  background-image: radial-gradient(#DDEB78, #FCF9F1, #BEECDD);
+  background-image: radial-gradient(#DDEB78, #BEECDD, #FCF9F1);
   
 }
