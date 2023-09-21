@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/navipu/static/css/main.5153d06a.css",
-    "main.js": "/navipu/static/js/main.35ee0fbf.js",
+    "main.css": "/navipu/static/css/main.0eed7b1e.css",
+    "main.js": "/navipu/static/js/main.bcb27987.js",
     "static/js/787.4a44f555.chunk.js": "/navipu/static/js/787.4a44f555.chunk.js",
     "index.html": "/navipu/index.html",
-    "main.5153d06a.css.map": "/navipu/static/css/main.5153d06a.css.map",
-    "main.35ee0fbf.js.map": "/navipu/static/js/main.35ee0fbf.js.map",
+    "main.0eed7b1e.css.map": "/navipu/static/css/main.0eed7b1e.css.map",
+    "main.bcb27987.js.map": "/navipu/static/js/main.bcb27987.js.map",
     "787.4a44f555.chunk.js.map": "/navipu/static/js/787.4a44f555.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5153d06a.css",
-    "static/js/main.35ee0fbf.js"
+    "static/css/main.0eed7b1e.css",
+    "static/js/main.bcb27987.js"
   ]
 }
