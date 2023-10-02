@@ -10,7 +10,7 @@ export const places = [
   },
   {
     id: 1,
-    PlaceName: "PIT",
+    PlaceName: "PIT",     
     PlaceDescription:
       " Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. ",
     PlaceImage: "https://maps.gstatic.com/tactile/pane/default_geocode-2x.png",

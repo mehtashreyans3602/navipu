@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74ec7eaf-f71f-4e6c-af7c-fb4e688cb74b" name="Changes" comment="minor fixes auth header" />
+    <list default="true" id="74ec7eaf-f71f-4e6c-af7c-fb4e688cb74b" name="Changes" comment="minor fixes auth header">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,7 +91,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Features",
     "last_opened_file_path": "/Users/thakoraarya/Documents/GitHub/navipu",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -178,6 +180,7 @@
       <workItem from="1695019583347" duration="2905000" />
       <workItem from="1695285663588" duration="1409000" />
       <workItem from="1695287266413" duration="5045000" />
+      <workItem from="1695459746679" duration="455000" />
     </task>
     <task id="LOCAL-00001" summary="fix">
       <option name="closed" value="true" />
